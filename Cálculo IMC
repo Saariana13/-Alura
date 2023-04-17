@@ -1,0 +1,44 @@
+<meta charset="UFT 8">
+<br>
+<h1>CÁLCULO IMC</h1> 
+<br>
+
+<script>
+
+	function SaltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		SaltarLinea();
+
+	}
+
+	function CalcularImc (peso,altura) {
+
+		imc = peso / (altura * altura)
+		return(imc);
+
+	}
+
+	pesoAriana = 50
+	alturaAriana = 1.55
+	imcAriana = pesoAriana / (alturaAriana * alturaAriana)
+	imprimir("El IMC de Ariana es: " + imcAriana)
+
+
+	pesoDanny = 55
+	alturaDanny = 1.53
+	imcDanny = CalcularImc(pesoDanny,alturaDanny)
+	imprimir("El IMC de Danny es: " + imcDanny)
+
+	imcValeria = CalcularImc(58,1.57)
+	imprimir("El IMC de Valeria es: " + imcValeria)
+
+
+</script>	
