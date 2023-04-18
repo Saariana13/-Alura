@@ -40,5 +40,11 @@
 	imcValeria = CalcularImc(58,1.57)
 	imprimir("El IMC de Valeria es: " + imcValeria)
 
+	nombre = prompt("Ingrese su nombre: ");
+	pesoInformado = prompt(nombre + " Ingrese su peso: ");
+	alturaInformada = prompt(nombre + " Ingrese su  altura: ");
+	imcCalculado = CalcularImc(pesoInformado,alturaInformada)
+
+	imprimir("El IMC calculado de " + nombre + " es: " + imcCalculado);
 
 </script>	
