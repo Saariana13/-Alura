@@ -26,25 +26,42 @@
 
 	}
 
-	pesoAriana = 50
-	alturaAriana = 1.55
-	imcAriana = pesoAriana / (alturaAriana * alturaAriana)
-	imprimir("El IMC de Ariana es: " + imcAriana)
-
-
-	pesoDanny = 55
-	alturaDanny = 1.53
-	imcDanny = CalcularImc(pesoDanny,alturaDanny)
-	imprimir("El IMC de Danny es: " + imcDanny)
-
-	imcValeria = CalcularImc(58,1.57)
-	imprimir("El IMC de Valeria es: " + imcValeria)
 
 	nombre = prompt("Ingrese su nombre: ");
 	pesoInformado = prompt(nombre + " Ingrese su peso: ");
-	alturaInformada = prompt(nombre + " Ingrese su  altura: ");
+	alturaInformada = prompt(nombre + " Ingrese su altura: ");
+
 	imcCalculado = CalcularImc(pesoInformado,alturaInformada)
 
 	imprimir("El IMC calculado de " + nombre + " es: " + imcCalculado);
 
-</script>	
+	if (imcCalculado < 18.5) {
+
+		imprimir("IMC abajo de lo recomendado");
+
+	}
+
+	if (imcCalculado >= 18.5) {
+
+		if (imcCalculado < 25)
+
+			imprimir("IMC está dentro del intervalo normal");
+
+	}
+
+	if (imcCalculado >= 25) {
+
+		if(imcCalculado < 30)
+
+		imprimir("IMC considerado como sobrepeso");
+
+	}
+
+	if (imcCalculado >= 30) {
+
+		imprimir("IMC considerado como obesidad");
+
+	}
+
+
+</script>		
