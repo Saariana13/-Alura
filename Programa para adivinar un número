@@ -1,0 +1,61 @@
+<meta charset="UFT 8">
+<br>
+<h1>JUEGO DE ADIVINAR</h1> 
+<br>
+
+<script>
+
+	function SaltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		SaltarLinea();
+
+	}
+
+	var numeroPensado = Math.round(Math.random()*10); 
+	var intentos = 3; 
+	var contador = 1; 
+
+	while (contador <= intentos) {
+
+		var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"));
+
+		if(numeroPensado == numeroLanzado) {
+
+			alert("Usted ha acertado en el intento " + contador + "El número pensado era " + numeroPensado);
+			break; 
+
+		}
+
+		else {
+
+			alert("Número equivocado")
+
+		}
+
+		contador++; 
+		
+	}
+
+	if(numeroPensado == numeroLanzado) {
+
+		imprimir("Usted ha acertado en el intento " + intentos + "El número pensado era " + numeroPensado);
+
+	}
+
+	else{
+
+		imprimir("Número equivocdo. El número pensado era " + numeroPensado);
+	}
+
+
+	imprimir ("FIN")
+
+</script>
